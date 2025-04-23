@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>原子番号クイズ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>原子番号クイズ</h1>
+    <div id="modeSelection">
+      <label><input type="radio" name="quizMode" value="mode1" checked onchange="changeMode()"> 元素記号→元素名</label>
+      <label><input type="radio" name="quizMode" value="mode2" onchange="changeMode()"> 元素名→元素記号</label>
+      <label><input type="radio" name="quizMode" value="mode3" onchange="changeMode()"> ランダム</label>
+      <label><input type="radio" name="quizMode" value="mode4" onchange="changeMode()"> 原子番号→元素記号＋元素名</label>
+    </div>
+    <p id="score">連続正解スコア: 0</p>
+    <div id="questionArea"></div>
+    <div id="answers"></div>
+    <div class="buttons">
+      <button onclick="checkAnswer()">回答</button>
+      <button onclick="nextQuestion()">次の問題</button>
+    </div>
+    <p id="result"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
